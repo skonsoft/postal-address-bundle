@@ -44,7 +44,14 @@ public function registerBundles()
 
 ```
 
-### Step 4: Clear cache
+### Step 4: Load fixtures
+```
+./app/console doctrine:schema:update --force
+
+```
+
+
+### Step 5: Clear cache
 
 Clear your cache and enjoy !
 
