@@ -1,5 +1,5 @@
 {
-    "name": "skonsoft/ postal-address-bundle",
+    "name": "skonsoft/postal-address-bundle",
     "type": "symfony-bundle",
     "description": "Addressing, countries and states management for Symfony2",
     "keywords": ["address", "skonsoft", "postal address", "addressing"],
