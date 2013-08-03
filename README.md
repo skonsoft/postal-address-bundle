@@ -1,4 +1,4 @@
-postal-address-bundle
+postal-address-bundle [![Build Status](https://travis-ci.org/skonsoft/postal-address-bundle.png?branch=master)](https://travis-ci.org/skonsoft/postal-address-bundle)
 =====================
 
 Addressing, countries and states  management for Symfony2.
