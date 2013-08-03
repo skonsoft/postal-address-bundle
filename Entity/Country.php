@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM,
 /**
  * Country
  *
- * @ORM\Table(name="ss_address__country")
+ * @ORM\Table(name="ss_address__country", uniqueConstraints={@ORM\UniqueConstraint(name="ison_name_idx", columns={"iso_name"})} )
  * @ORM\Entity(repositoryClass="Skonsoft\PostalAddressBundle\Entity\CountryRepository")
  */
 class Country
