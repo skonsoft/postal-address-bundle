@@ -104,7 +104,7 @@ class State
     /**
      * Set addresses
      *
-     * @param \Doctrine\Common\Collections\ArrayCollection\ArrayCollection $addresses
+     * @param \Doctrine\Common\Collections\ArrayCollection $addresses
      *
      * @return \Skonsoft\PostalAddressBundle\Entity\State
      */
@@ -118,7 +118,7 @@ class State
     /**
      * Get addresses
      *
-     * @return ArrayCollection
+     * @return \Doctrine\Common\Collections\ArrayCollection
      */
     public function getAddresses()
     {

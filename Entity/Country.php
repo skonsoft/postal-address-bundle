@@ -36,7 +36,7 @@ class Country
     private $isoName;
 
     /**
-     * @var array
+     * @var ArrayCollection
      *
      * @ORM\OneToMany(targetEntity="Skonsoft\PostalAddressBundle\Entity\State", mappedBy="country", cascade={"persist", "remove"}, orphanRemoval=true)
      */
