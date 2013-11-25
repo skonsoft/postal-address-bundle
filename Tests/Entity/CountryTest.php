@@ -11,21 +11,4 @@ use Skonsoft\PostalAddressBundle\Test\WebTestCase,
  */
 class CountryTest extends WebTestCase
 {
-
-    /**
-     * @expectedException Doctrine\DBAL\DBALException
-     */
-    public function testUniqueIsoName()
-    {
-        $c = new Country();
-        $c->setName('Skonsoft');
-        $c->setIsoName('ss');
-
-        $c1 = clone $c;
-
-        $this->em->persist($c);
-        $this->em->persist($c1);
-        $this->em->flush();
-    }
-
 }
