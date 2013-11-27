@@ -1,5 +1,4 @@
 <?php
-
 namespace Skonsoft\PostalAddressBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -62,7 +61,7 @@ class Address
      * @ORM\Column(name="state", type="string", length=255, nullable=true)
      */
     private $state;
-    
+
     /**
      * @var string ISO Name
      *
@@ -199,7 +198,7 @@ class Address
     {
         return $this->name;
     }
-    
+
     /**
      * @return string
      */
@@ -239,6 +238,5 @@ class Address
         $this->country = $country;
         return $this;
     }
-
 
 }
