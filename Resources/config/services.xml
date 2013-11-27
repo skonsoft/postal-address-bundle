@@ -4,17 +4,16 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
-    <!--
     <parameters>
-        <parameter key="skonsoft_postal_address.example.class">Skonsoft\PostalAddressBundle\Example</parameter>
+        <parameter key="ss_postal_address.entity.address.class">Skonsoft\PostalAddressBundle\Entity\Address</parameter>
+        <parameter key="ss_postal_address.form.type.address.class">Skonsoft\PostalAddressBundle\Form\Type\AddressType</parameter>
     </parameters>
 
     <services>
-        <service id="skonsoft_postal_address.example" class="%skonsoft_postal_address.example.class%">
-            <argument type="service" id="service_id" />
-            <argument>plain_value</argument>
-            <argument>%parameter_name%</argument>
+        <service id="ss_postal_address.form.type.address" class="%ss_postal_address.form.type.address.class%">
+            <argument>%ss_postal_address.entity.address.class%</argument>
+            <tag name="form.type" alias="ss_postal_address" />
         </service>
     </services>
-    -->
+    
 </container>

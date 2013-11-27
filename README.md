@@ -1,13 +1,11 @@
 postal-address-bundle [![Build Status](https://travis-ci.org/skonsoft/postal-address-bundle.png?branch=master)](https://travis-ci.org/skonsoft/postal-address-bundle)
 =====================
 
-Addressing, countries and states  management for Symfony2.
+Simple Addressing  management bundle for Symfony2.
 
 ## What is it ?
 It's a small bundle gives you a basic postal adresses managing.
-This bundle give you three ready to use entities to manage a postal adresses.
-* Country: define a coutry entity, you can use ISO-3166 alpha2 to define a country.
-* State: defines a state or province or region
+This bundle give you three ready to use entity to manage a postal adresses.
 * Address: a postal address
 
 ### Step 1: Install bundle using composer
