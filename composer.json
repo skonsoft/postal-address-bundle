@@ -1,7 +1,7 @@
 {
     "name": "skonsoft/postal-address-bundle",
     "type": "symfony-bundle",
-    "description": "Addressing, countries and states management for Symfony2",
+    "description": "Addressing management for Symfony2",
     "keywords": ["address", "skonsoft", "postal address", "addressing"],
     "homepage": "https://github.com/skonsoft/postal-address-bundle",
     "license": "MIT",
@@ -13,7 +13,7 @@
     ],
     "require": {
         "php": ">=5.3.2",
-        "symfony/framework-bundle" : ">=2.1,<2.4"
+        "symfony/framework-bundle" : ">=2.1,<2.5"
     },
     "autoload": {
         "psr-0": {"Skonsoft\\PostalAddressBundle": ""}
