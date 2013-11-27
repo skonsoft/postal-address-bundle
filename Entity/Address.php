@@ -50,19 +50,25 @@ class Address
     private $city;
 
     /**
-     * @var string
+     * @var string The address Name
      *
      * @ORM\Column(name="name", type="string", length=255, nullable=true)
      */
     private $name;
 
     /**
-     * @var State
+     * @var string
      *
-     * @ORM\ManyToOne(targetEntity="Skonsoft\PostalAddressBundle\Entity\State")
-     * @ORM\JoinColumn(name="state_id", referencedColumnName="id", nullable=false)
+     * @ORM\Column(name="state", type="string", length=255, nullable=true)
      */
     private $state;
+    
+    /**
+     * @var string ISO Name
+     *
+     * @ORM\Column(name="country", type="string", length=3, nullable=false)
+     */
+    private $country;
 
     /**
      * Get id
@@ -193,10 +199,9 @@ class Address
     {
         return $this->name;
     }
-
+    
     /**
-     *
-     * @return \Skonsoft\PostalAddressBundle\Entity\State
+     * @return string
      */
     public function getState()
     {
@@ -204,14 +209,36 @@ class Address
     }
 
     /**
-     * @param \Skonsoft\PostalAddressBundle\Entity\State $state
-     *
+     * 
+     * @return string
+     */
+    public function getCountry()
+    {
+        return $this->country;
+    }
+
+    /**
+     * @param string $state
+     * 
      * @return \Skonsoft\PostalAddressBundle\Entity\Address
      */
-    public function setState(State $state)
+    public function setState($state)
     {
         $this->state = $state;
 
         return $this;
     }
+
+    /**
+     * @param string $country
+     * 
+     * @return \Skonsoft\PostalAddressBundle\Entity\Address
+     */
+    public function setCountry($country)
+    {
+        $this->country = $country;
+        return $this;
+    }
+
+
 }
