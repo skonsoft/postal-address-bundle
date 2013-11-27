@@ -34,7 +34,9 @@ class WebTestCase extends BaseWebTestCase
     protected function tearDown()
     {
         parent::tearDown();
-        $this->em->close();
+        if ($this->em instanceof \Doctrine\ORM\EntityManager){
+            $this->em->close();
+        }
     }
 
 }
