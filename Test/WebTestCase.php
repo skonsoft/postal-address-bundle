@@ -23,8 +23,8 @@ class WebTestCase extends BaseWebTestCase
         static::$kernel = static::createKernel();
         static::$kernel->boot();
         $this->em = static::$kernel->getContainer()
-                ->get('doctrine')
-                ->getManager()
+            ->get('doctrine')
+            ->getManager()
         ;
     }
 
