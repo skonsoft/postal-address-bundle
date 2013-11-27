@@ -26,7 +26,7 @@ class AddressTypeTest extends TypeTestCase
         );
 
         $type = new AddressType();
-        
+
 
         $object = new Address();
         $object->setStreet($formData['street']);
@@ -38,7 +38,7 @@ class AddressTypeTest extends TypeTestCase
         $object->setName($formData['name']);
 
         $form = $this->factory->create($type);
-        
+
         // submit the data to the form directly
         $form->submit($formData);
 

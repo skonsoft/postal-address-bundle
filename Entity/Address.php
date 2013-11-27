@@ -2,6 +2,7 @@
 namespace Skonsoft\PostalAddressBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Address
@@ -24,6 +25,8 @@ class Address
      * @var string
      *
      * @ORM\Column(name="street", type="string", length=255)
+     * 
+     * @Assert\NotBlank(message = "address.street.not_blank")
      */
     private $street;
 
@@ -38,6 +41,9 @@ class Address
      * @var integer
      *
      * @ORM\Column(name="postal_code", type="integer")
+     * 
+     * @Assert\NotBlank(message = "address.postal_code.not_blank")
+     * @Assert\Type(type="integer", message="address.postal_code.is_not_valid")
      */
     private $postalCode;
 
@@ -45,6 +51,8 @@ class Address
      * @var string
      *
      * @ORM\Column(name="city", type="string", length=255, nullable=false)
+     * 
+     * @Assert\NotBlank(message = "address.city.not_blank")
      */
     private $city;
 
@@ -66,6 +74,14 @@ class Address
      * @var string ISO Name
      *
      * @ORM\Column(name="country", type="string", length=3, nullable=false)
+     * 
+     * @Assert\NotBlank(message = "address.country.not_blank")
+     * @Assert\Length(
+     *      min = "2",
+     *      max = "3",
+     *      minMessage = "address.country.at_least_length",
+     *      maxMessage = "address.country.at_max_length"
+     * )
      */
     private $country;
 
